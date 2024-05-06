@@ -5,7 +5,9 @@ import sys
 pt = sys.argv[1]
 
 def process_files(mode):
-    models = ['LogisticRegression', 'MLP', 'RandomForest', 'SVM', 'CatBoost', 'LightGBM', 'XGBoost']
+    # models = ['LogisticRegression', 'MLP', 'RandomForest', 'SVM', 'CatBoost', 'LightGBM', 'XGBoost']
+    models = ['MLP', 'SVM', 'CatBoost', 'LightGBM', 'XGBoost']
+
 
     if mode == 'test':
         parent_dir = f'../{pt}/test'
