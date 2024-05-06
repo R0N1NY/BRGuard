@@ -42,8 +42,7 @@ for directory in [output_dir, pc_dir, mobile_dir]:
         os.makedirs(directory)
 
 def split_data(df, test_frac, val_frac, columns_to_delete, seed=1):
-    df = df.drop(columns=columns_to_delete, errors='ignore')
-    groups = df['group'].unique()
+    groups = df['group'].unique()  # Ensure the 'group' column is used before it's dropped
     np.random.seed(seed)
     np.random.shuffle(groups)
     num_test = int(len(groups) * test_frac)
@@ -54,16 +53,28 @@ def split_data(df, test_frac, val_frac, columns_to_delete, seed=1):
     test_df = df[df['group'].isin(test_groups)]
     val_df = df[df['group'].isin(val_groups)]
     train_df = df[df['group'].isin(train_groups)]
+    train_df = train_df.drop(columns=columns_to_delete + ['group'], errors='ignore')
+    test_df = test_df.drop(columns=columns_to_delete + ['group'], errors='ignore')
+    val_df = val_df.drop(columns=columns_to_delete + ['group'], errors='ignore')
     return train_df, test_df, val_df
 
 columns_to_delete = ['AvgPartUpgrade', 'PlayerUpgrade', 'ShieldUpgrade', 'PlatformType']
 pc_train, pc_test, pc_val = split_data(pc_data, test_frac=0.15, val_frac=0.15, columns_to_delete=columns_to_delete)
 mobile_train, mobile_test, mobile_val = split_data(mobile_data, test_frac=0.15, val_frac=0.15, columns_to_delete=columns_to_delete)
 
+# Reorder columns
+cols_order = ['ID'] + sorted([col for col in pc_train.columns if col not in ['ID', 'isCheater']]) + ['isCheater']
+
+pc_train = pc_train[cols_order]
+pc_test = pc_test[cols_order]
+pc_val = pc_val[cols_order]
+mobile_train = mobile_train[cols_order]
+mobile_test = mobile_test[cols_order]
+mobile_val = mobile_val[cols_order]
+
 pc_train.to_csv(os.path.join(pc_dir, 'final_train.csv'), index=False)
 pc_test.to_csv(os.path.join(pc_dir, 'final_test.csv'), index=False)
 pc_val.to_csv(os.path.join(pc_dir, 'final_val.csv'), index=False)
-
 mobile_train.to_csv(os.path.join(mobile_dir, 'final_train.csv'), index=False)
 mobile_test.to_csv(os.path.join(mobile_dir, 'final_test.csv'), index=False)
 mobile_val.to_csv(os.path.join(mobile_dir, 'final_val.csv'), index=False)
