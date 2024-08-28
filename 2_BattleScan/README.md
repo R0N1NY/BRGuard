@@ -39,32 +39,25 @@ $ python downsample_train.py dataset/mobile/final_train.csv
 
 This script generates several sub-training datasets in the `dataset/mobile` folder based on the ratio of positive to negative samples. If you want to train the `pc` platform, just modify the `dataset/mobile/final_train.csv` option to `dataset/pc/final_train.csv`.
 
-##### TBD
-
 ## 3. Training Models
 
-To save time, a script is provided for parallel training of all models. This script will use seven different classification models, each trained on the sub-training datasets in the `dataset` folder:
+We need to train each sub-dataset of data separately, for example:
 
 ```sh
-$ ./train.sh 13 mobile 2
+$ python BattleScan_train.py 1 mobile
 ```
 
-The first option should be the same as the number of sub-training sets, e.g. for `mobile` it is `13` and for `pc` it is `4`, just check the corresponding dataset.
-The second option is the platform type of the training data.
-And the third option is the maximum number of threads to run a **single** python script. We recommend setting smaller values during training, as there may be many python scripts running in parallel.
-
-For training individual models, refer to the scripts in the `training_scripts` folder. The training models will be saved in a newly created `PlatformType/models` folder. Some other training result data will also be stored in the corresponding newly created folder.
+The first option is the serial number of sub-training sets and the second option is the platform type of the training data. We have provided the trained models in the corresponding datasets. Please check `mobile` and `pc` folder, which contains training data and models.
 
 ## 4. Testing Models
 
-After training, test the models using the test script, which is similar to the training script. This script will load all trained models:
+After training, run the script to test the models.
 
 ```sh
 $ ./test.sh 13 mobile
 ```
 
-The options here are the same as the first and second options of the training script (`train.sh`).
-For individual model testing, refer to the `test_scripts` folder. The test results will be saved in a newly created `test` folder, and some results data will be saved in the newly created `results/test_results` folder.
+The options here are the same as the first and second options of the previous subsystem script (**MatchScope**). The validation and testing rsults will be saved in the same folder as training process under`mobile` and `pc` folder.
 
 ## 5. Evaluating Predictions
 

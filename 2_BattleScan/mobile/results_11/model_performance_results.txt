@@ -1,0 +1,11 @@
+Best Validation Performance (Epoch 114)
+Best Valid Accuracy: 0.82935256121376
+Best Valid Recall: 0.723175965665236
+Best Valid Precision: 0.2507440476190476
+Best Valid F1 Score: 0.3723756906077348
+
+Test Results
+Accuracy: 0.8267988583445997
+Precision: 0.25504322766570603
+Recall: 0.7484143763213531
+F1 Score: 0.38044062332079526

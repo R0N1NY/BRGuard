@@ -1,0 +1,7 @@
+Best Validation Recall: 0.7081545064377682, Acc: 0.555355265134445
+Best Hyperparameters:
+dim_model: 256
+dim_feedforward: 128
+nhead: 1
+num_layers: 2
+lr: 0.005

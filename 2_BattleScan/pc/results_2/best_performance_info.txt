@@ -1,0 +1,11 @@
+Best Model saved at: /home/chenxin/Farlight84/2_BattleScan/pc/results_2/best_model_grid_search.pth
+Best Epoch: 11
+Hyperparameters:
+dim_model: 32
+dim_feedforward: 8
+nhead: 1
+num_layers: 1
+lr: 0.001
+Recall: 0.7946
+Accuracy: 0.6844
+Score: 1.4789
