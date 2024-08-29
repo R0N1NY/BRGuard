@@ -36,7 +36,7 @@ After running this script, we can get all the dataset we need for training and t
 
 ## 2. Training
 
-We need to find the weights of subsystems and the threshold via the Task-Specified Threshold Optimizer.
+We need to find the weights of models and the threshold via the Task-Specified Threshold Optimizer.
 
 ```sh
 $ python AdaLink.py mobile
@@ -61,7 +61,14 @@ Best Threshold: 0.5256941311073032
     "AUC-ROC": 0.9276037900787727
 }
 ```
-## 5. Evaluating Predictions
+
+The results will be saved in the file optimize_results.txt as the validation results. Note that the order of the weight parameters is `BattleScan`, `CatBoost`, `LightGBM`, `MLP`, `SVM`, `XGBoost`.
+
+## 3. Test with Selected Parameters
+
+You can choose a set of parameters to test according to your needs,
+
+## 3. Test with Selected Parameters
 
 First, enter the `eval` folder and run the `merge_pred.py` script to merge all prediction results. You can choose to merge both validation and test results or just one of them (add the option `test` or `val`):
 
