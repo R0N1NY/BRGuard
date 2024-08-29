@@ -1,0 +1,135 @@
+
+Optimal Parameters for F1:
+Best F1 Score: 0.8463949843260188
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
+
+Optimal Parameters for AUC-ROC:
+Best Accuracy: 0.9299803882556917
+Best Weights: [0.04653004 0.38988495 0.35915307 0.02998306 0.10012536 0.07432352]
+Best Threshold: 0.33808122052565126
+{
+    "TP": 410,
+    "FP": 123,
+    "TN": 6068,
+    "FN": 56,
+    "Accuracy": 0.9731110109659006,
+    "F1 Score": 0.8208208208208208,
+    "Recall": 0.8798283261802575,
+    "AUC-ROC": 0.9299803882556917
+}
+
+Optimal Parameters for Recall:
+Best Recall: 1.0
+Best Weights: [0.18118991 0.34090587 0.03324872 0.11149458 0.21944616 0.11371475]
+Best Threshold: 0.03218696870271165
+{
+    "TP": 466,
+    "FP": 6191,
+    "TN": 0,
+    "FN": 0,
+    "Accuracy": 0.07000150217815833,
+    "F1 Score": 0.1308437456128036,
+    "Recall": 1.0,
+    "AUC-ROC": 0.5
+}
+
+Optimal Parameters for Accuracy:
+Best Accuracy: 0.9779179810725552
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
+
+Optimal Parameters for Accuracy when Recall > 0.8:
+Best Accuracy (with Recall > 0.8): 0.9779179810725552
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
+
+Optimal Parameters for Accuracy when Recall > 0.85:
+Best Accuracy (with Recall > 0.85): 0.9779179810725552
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
+
+Optimal Parameters for Accuracy when Recall > 0.9:
+Best Accuracy (with Recall > 0.9): 0.886134895598618
+Best Weights: [0.12694767 0.10493707 0.34035673 0.00906724 0.14472804 0.27396325]
+Best Threshold: 0.07054885689588464
+{
+    "TP": 421,
+    "FP": 713,
+    "TN": 5478,
+    "FN": 45,
+    "Accuracy": 0.886134895598618,
+    "F1 Score": 0.52625,
+    "Recall": 0.9034334763948498,
+    "AUC-ROC": 0.894133149116501
+}
+
+Optimal Parameters for Accuracy when Recall > 0.7:
+Best Accuracy (with Recall > 0.7): 0.9779179810725552
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
+
+Optimal Parameters for Accuracy when Recall > 0.75:
+Best Accuracy (with Recall > 0.75): 0.9779179810725552
+Best Weights: [0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004]
+Best Threshold: 0.5256941311073032
+{
+    "TP": 405,
+    "FP": 86,
+    "TN": 6105,
+    "FN": 61,
+    "Accuracy": 0.9779179810725552,
+    "F1 Score": 0.8463949843260188,
+    "Recall": 0.869098712446352,
+    "AUC-ROC": 0.9276037900787727
+}
