@@ -1,0 +1,108 @@
+Prediction file saved at eval/pc/results/F1_pred.csv
+Optimal Parameters for F1:
+{
+    "TP": 602,
+    "FP": 502,
+    "TN": 2283,
+    "FN": 152,
+    "Accuracy": 0.815202034473015,
+    "F1 Score": 0.6480086114101185,
+    "Recall": 0.7984084880636605,
+    "AUC-ROC": 0.8697588921324451
+}
+Prediction file saved at eval/pc/results/AUC-ROC_pred.csv
+Optimal Parameters for AUC-ROC:
+{
+    "TP": 638,
+    "FP": 628,
+    "TN": 2157,
+    "FN": 116,
+    "Accuracy": 0.7897711217858152,
+    "F1 Score": 0.6316831683168317,
+    "Recall": 0.8461538461538461,
+    "AUC-ROC": 0.8701617703784483
+}
+Prediction file saved at eval/pc/results/Recall_pred.csv
+Optimal Parameters for Recall:
+{
+    "TP": 754,
+    "FP": 2785,
+    "TN": 0,
+    "FN": 0,
+    "Accuracy": 0.2130545351794292,
+    "F1 Score": 0.3512695085022129,
+    "Recall": 1.0,
+    "AUC-ROC": 0.8668096900313825
+}
+Prediction file saved at eval/pc/results/Accuracy_pred.csv
+Optimal Parameters for Accuracy:
+{
+    "TP": 595,
+    "FP": 435,
+    "TN": 2350,
+    "FN": 159,
+    "Accuracy": 0.8321559762644815,
+    "F1 Score": 0.6670403587443946,
+    "Recall": 0.7891246684350133,
+    "AUC-ROC": 0.8697684164408612
+}
+Prediction file saved at eval/pc/results/Accuracy_when_Recall__0.8_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.8:
+{
+    "TP": 595,
+    "FP": 435,
+    "TN": 2350,
+    "FN": 159,
+    "Accuracy": 0.8321559762644815,
+    "F1 Score": 0.6670403587443946,
+    "Recall": 0.7891246684350133,
+    "AUC-ROC": 0.8697684164408612
+}
+Prediction file saved at eval/pc/results/Accuracy_when_Recall__0.85_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.85:
+{
+    "TP": 602,
+    "FP": 502,
+    "TN": 2283,
+    "FN": 152,
+    "Accuracy": 0.815202034473015,
+    "F1 Score": 0.6480086114101185,
+    "Recall": 0.7984084880636605,
+    "AUC-ROC": 0.8697588921324451
+}
+Prediction file saved at eval/pc/results/Accuracy_when_Recall__0.9_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.9:
+{
+    "TP": 660,
+    "FP": 872,
+    "TN": 1913,
+    "FN": 94,
+    "Accuracy": 0.7270415371573891,
+    "F1 Score": 0.5774278215223098,
+    "Recall": 0.8753315649867374,
+    "AUC-ROC": 0.8667077799313297
+}
+Prediction file saved at eval/pc/results/Accuracy_when_Recall__0.7_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.7:
+{
+    "TP": 595,
+    "FP": 435,
+    "TN": 2350,
+    "FN": 159,
+    "Accuracy": 0.8321559762644815,
+    "F1 Score": 0.6670403587443946,
+    "Recall": 0.7891246684350133,
+    "AUC-ROC": 0.8697684164408612
+}
+Prediction file saved at eval/pc/results/Accuracy_when_Recall__0.75_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.75:
+{
+    "TP": 595,
+    "FP": 435,
+    "TN": 2350,
+    "FN": 159,
+    "Accuracy": 0.8321559762644815,
+    "F1 Score": 0.6670403587443946,
+    "Recall": 0.7891246684350133,
+    "AUC-ROC": 0.8697684164408612
+}

@@ -66,21 +66,27 @@ The results will be saved in the file optimize_results.txt as the validation res
 
 ## 3. Test with Selected Parameters
 
-You can choose a set of parameters to test according to your needs,
-
-## 3. Test with Selected Parameters
-
-First, enter the `eval` folder and run the `merge_pred.py` script to merge all prediction results. You can choose to merge both validation and test results or just one of them (add the option `test` or `val`):
-
-```sh
-$ cd eval && python merge_pred.py mobile
-```
-
-The option is the platform type (`mobile` or `pc`) of your evaluation target.
-After running the script, you will obtain the final prediction results for the MatchScope subsystem in the specified folder (test/val). Then, run the `evaluation.py` script to obtain the model's evaluation metrics, which will be displayed in the terminal and saved in the respective folder:
+Run `evaulation.py` to evaluate the parameters.
 
 ```sh
 $ python evaluation.py mobile
 ```
 
-Similar to the merge script, selecting the platform type and you can also choose to evaluate results for a specific dataset, just add the option `test` or `val`.
+The option is the platform type (`mobile` or `pc`) of your training target.
+Here, we use the default parameter settings (*Optimal Parameters for Accuracy when Recall > 0.85*) to test. You can also choose a set of parameters to test according to your requirements, for example:
+
+```sh
+$ python evaluation.py mobile 0.05103119 0.03980747 0.52915914 0.06095147 0.02168069 0.29737004 0.5256941311073032
+```
+
+Then you will get a prediction results from AdaptLink in the file `eval/{platform}/AdaptLink_test_pred.csv` and a performance results in the file `eval/{platform}/AdaptLink_test_results.csv`.
+
+## 3. Test All Parameters
+
+Besides testing a set of parameters individually, you can also directly test combinations of parameters under all metrics in the file `{platform}/optimize_results.txt`.
+
+```sh
+$ python evaluation.py mobile
+```
+
+Then we can get all the prediction results and performance results in `eval/{platform}/results` folder.
