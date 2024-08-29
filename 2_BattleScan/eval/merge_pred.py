@@ -9,16 +9,15 @@ def create_directory_if_not_exists(directory):
         os.makedirs(directory)
 
 def process_files(mode):
-    parent_dir = os.path.join(os.getcwd(), '..', pt)  # 设置为当前工作目录的上一级目录下的 mobile/pc 文件夹
-    output_dir = os.path.join(os.getcwd(), pt)  # 输出目录为当前工作目录下的 mobile/pc 文件夹
-    create_directory_if_not_exists(output_dir)  # 确保输出目录存在
+    parent_dir = os.path.join(os.getcwd(), '..', pt)
+    output_dir = os.path.join(os.getcwd(), pt)
+    create_directory_if_not_exists(output_dir)
 
     if mode == 'test':
         output_file = 'BattleScan_test.csv'
     else:
         output_file = 'BattleScan_val.csv'
 
-    # 收集所有 results_ 开头的文件夹
     results_dirs = [os.path.join(parent_dir, d) for d in os.listdir(parent_dir) if os.path.isdir(os.path.join(parent_dir, d)) and d.startswith('results_')]
 
     merged_df = None

@@ -10,10 +10,12 @@ from sklearn.metrics import (confusion_matrix, recall_score, accuracy_score, bal
 pt = sys.argv[1]
 
 def process_stats_and_plots(mode):
-    os.chdir(pt)
-    os.chdir(mode)
+    mode_path = os.path.join(pt, mode)
+    if not os.path.exists(mode_path):
+        print(f"Directory {mode_path} does not exist.")
+        return
 
-    df = pd.read_csv(f'MatchScope_{mode}.csv')
+    df = pd.read_csv(os.path.join(mode_path, f'MatchScope_{mode}.csv'))
     results = pd.DataFrame(columns=['Model', 'TP', 'TN', 'FP', 'FN', 
                                     'Accuracy', 'Recall', 'NPV', 'FPR',
                                     'AUC-ROC', 'Operational Efficiency Index', 'FNR'])
@@ -38,9 +40,9 @@ def process_stats_and_plots(mode):
                             'AUC-ROC': [auc_roc], 'Operational Efficiency Index': [oei], 'FNR': [fnr]})
         results = pd.concat([results, row], ignore_index=True)
 
-    results.to_csv(f'MatchScope_{mode}_results.csv', index=False)
+    results.to_csv(os.path.join(mode_path, f'MatchScope_{mode}_results.csv'), index=False)
 
-    data = pd.read_csv(f'MatchScope_{mode}.csv')
+    data = pd.read_csv(os.path.join(mode_path, f'MatchScope_{mode}.csv'))
     cm = confusion_matrix(data['True Label'], data['final_pred'])
     fpr, tpr, _ = roc_curve(data['True Label'], data['final_pred'])
     roc_auc = auc(fpr, tpr)
@@ -68,9 +70,8 @@ def process_stats_and_plots(mode):
     ax[2].set_xlim([0.0, 1.0])
 
     plt.tight_layout()
-    plt.savefig(f'MatchScope_{mode}.pdf')
+    plt.savefig(os.path.join(mode_path, f'MatchScope_{mode}.pdf'))
 
-    os.chdir('..')
     print(f"Results for {mode.upper()} mode:")
     print(results)
 

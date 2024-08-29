@@ -4,7 +4,7 @@ This repository contains instructions for running the **BattleScan** subsystem. 
 
 ## 1. Dataset Preparation
 
-For the BattleScan dataset, We need to ensure that the division of the dataset is consistent with MatchScope subsystem. Therefore we need to refer to the previous dataset for segmentation.
+For the BattleScan dataset, we need to ensure that the division of the dataset is consistent with MatchScope subsystem. Therefore we need to refer to the previous dataset for segmentation.
 
 ```sh
 $ python gen_data.py ../ExtractData/BlackEigenvalue_battleBehavior.csv ../ExtractData/WhiteEigenvalue_battleBehavior.csv ../1_MatchScope/dataset
