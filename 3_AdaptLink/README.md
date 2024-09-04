@@ -62,7 +62,20 @@ Best Threshold: 0.5256941311073032
 }
 ```
 
-The results will be saved in the file optimize_results.txt as the validation results. Note that the order of the weight parameters is `BattleScan`, `CatBoost`, `LightGBM`, `MLP`, `SVM`, `XGBoost`.
+The results will be saved as validation results in the file `optimize_results.txt` in the corresponding platform folder. Note that the order of the weight parameters is `BattleScan`, `CatBoost`, `LightGBM`, `MLP`, `SVM`, `XGBoost`.
+
+Also, you can add `"nofalse"` or `"nomiss"` option to do the Dynamic Adjustment Capabilities Evaluation. For example, you may want to minimize false bans (false positives):
+
+```sh
+$ python evaluation.py mobile nofalse
+```
+
+Or, you want to minimize missing the bans (false negatives):
+```sh
+$ python evaluation.py mobile nomiss
+```
+
+The results will be saved in the corresponding platform folder.
 
 ## 3. Test with Selected Parameters
 
@@ -80,12 +93,6 @@ $ python evaluation.py mobile 0.05103119 0.03980747 0.52915914 0.06095147 0.0216
 ```
 
 Then you will get a prediction results from AdaptLink in the file `eval/{platform}/AdaptLink_test_pred.csv` and a performance results in the file `eval/{platform}/AdaptLink_test_results.csv`.
-
-Also, you can add `"nofalse"` or `"nomiss"` option to do the Task-Specified Evaluation.
-
-```sh
-$ python evaluation.py mobile nofalse
-```
 
 ## 3. Test All Parameters
 
