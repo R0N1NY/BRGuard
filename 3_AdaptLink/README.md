@@ -81,12 +81,18 @@ $ python evaluation.py mobile 0.05103119 0.03980747 0.52915914 0.06095147 0.0216
 
 Then you will get a prediction results from AdaptLink in the file `eval/{platform}/AdaptLink_test_pred.csv` and a performance results in the file `eval/{platform}/AdaptLink_test_results.csv`.
 
+Also, you can add `"nofalse"` or `"nomiss"` option to do the Task-Specified Evaluation.
+
+```sh
+$ python evaluation.py mobile nofalse
+```
+
 ## 3. Test All Parameters
 
 Besides testing a set of parameters individually, you can also directly test combinations of parameters under all metrics in the file `{platform}/optimize_results.txt`.
 
 ```sh
-$ python evaluation.py mobile
+$ python evaluation_all_parameters.py mobile
 ```
 
 Then we can get all the prediction results and performance results in `eval/{platform}/results` folder.

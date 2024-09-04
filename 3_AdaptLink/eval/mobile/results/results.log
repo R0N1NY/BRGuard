@@ -8,7 +8,7 @@ Optimal Parameters for F1:
     "Accuracy": 0.8026137899954935,
     "F1 Score": 0.3933518005540167,
     "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
+    "AUC-ROC": 0.9163239923529042
 }
 Prediction file saved at eval/mobile/results/AUC-ROC_pred.csv
 Optimal Parameters for AUC-ROC:
@@ -20,19 +20,7 @@ Optimal Parameters for AUC-ROC:
     "Accuracy": 0.7887937509388614,
     "F1 Score": 0.3778761061946902,
     "Recall": 0.9027484143763214,
-    "AUC-ROC": 0.9160713455442538
-}
-Prediction file saved at eval/mobile/results/Recall_pred.csv
-Optimal Parameters for Recall:
-{
-    "TP": 473,
-    "FP": 6184,
-    "TN": 0,
-    "FN": 0,
-    "Accuracy": 0.07105302688898904,
-    "F1 Score": 0.1326788218793829,
-    "Recall": 1.0,
-    "AUC-ROC": 0.9156569911030034
+    "AUC-ROC": 0.9166932190827314
 }
 Prediction file saved at eval/mobile/results/Accuracy_pred.csv
 Optimal Parameters for Accuracy:
@@ -44,7 +32,7 @@ Optimal Parameters for Accuracy:
     "Accuracy": 0.8026137899954935,
     "F1 Score": 0.3933518005540167,
     "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
+    "AUC-ROC": 0.9163239923529042
 }
 Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.8_pred.csv
 Optimal Parameters for Accuracy_when_Recall__0.8:
@@ -56,7 +44,7 @@ Optimal Parameters for Accuracy_when_Recall__0.8:
     "Accuracy": 0.8026137899954935,
     "F1 Score": 0.3933518005540167,
     "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
+    "AUC-ROC": 0.9163239923529042
 }
 Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.85_pred.csv
 Optimal Parameters for Accuracy_when_Recall__0.85:
@@ -68,41 +56,29 @@ Optimal Parameters for Accuracy_when_Recall__0.85:
     "Accuracy": 0.8026137899954935,
     "F1 Score": 0.3933518005540167,
     "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
+    "AUC-ROC": 0.9163239923529042
 }
 Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.9_pred.csv
 Optimal Parameters for Accuracy_when_Recall__0.9:
 {
-    "TP": 438,
-    "FP": 1711,
-    "TN": 4473,
-    "FN": 35,
-    "Accuracy": 0.7377196935556557,
-    "F1 Score": 0.3340961098398169,
-    "Recall": 0.9260042283298098,
-    "AUC-ROC": 0.9153756266598108
+    "TP": 437,
+    "FP": 1704,
+    "TN": 4480,
+    "FN": 36,
+    "Accuracy": 0.7386210004506535,
+    "F1 Score": 0.334353481254782,
+    "Recall": 0.9238900634249472,
+    "AUC-ROC": 0.9168778324476449
 }
-Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.7_pred.csv
-Optimal Parameters for Accuracy_when_Recall__0.7:
+Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.95_pred.csv
+Optimal Parameters for Accuracy_when_Recall__0.95:
 {
-    "TP": 426,
-    "FP": 1267,
-    "TN": 4917,
-    "FN": 47,
-    "Accuracy": 0.8026137899954935,
-    "F1 Score": 0.3933518005540167,
-    "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
-}
-Prediction file saved at eval/mobile/results/Accuracy_when_Recall__0.75_pred.csv
-Optimal Parameters for Accuracy_when_Recall__0.75:
-{
-    "TP": 426,
-    "FP": 1267,
-    "TN": 4917,
-    "FN": 47,
-    "Accuracy": 0.8026137899954935,
-    "F1 Score": 0.3933518005540167,
-    "Recall": 0.9006342494714588,
-    "AUC-ROC": 0.9170268906459828
+    "TP": 457,
+    "FP": 2890,
+    "TN": 3294,
+    "FN": 16,
+    "Accuracy": 0.5634670271894247,
+    "F1 Score": 0.2392670157068063,
+    "Recall": 0.9661733615221987,
+    "AUC-ROC": 0.9165448446375971
 }
