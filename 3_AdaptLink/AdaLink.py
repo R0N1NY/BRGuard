@@ -38,38 +38,34 @@ def process_files(platform, threshold_option):
 
     if threshold_option == 'nofalse':
         output_file = os.path.join(platform, 'optimize_results_nofalse.txt')
-        best_fpr = float('inf')
-        best_weights_fpr = {}
-        best_threshold_fpr = 0
-        metrics_best_fpr = {}
 
-        for _ in tqdm(range(10000), desc="Searching for nofalse (low FPR)"):
-            weights = np.random.dirichlet(np.ones(len(column_names)), size=1)[0]
-            weight_dict = dict(zip(column_names, weights))
-            
-            df['final_pred_score'] = sum(df[col] * weight for col, weight in weight_dict.items())
-            threshold_val = np.random.uniform(0, 1)
-            df['final_pred'] = df['final_pred_score'].apply(lambda x: 1 if x >= threshold_val else 0)
-            recall = recall_score(df['True Label'], df['final_pred'])
-            tn, fp, fn, tp = confusion_matrix(df['True Label'], df['final_pred']).ravel()
-            fpr = fp / (fp + tn)
+        weights = np.ones(len(column_names)) 
+        threshold_val = 5.5 
 
-            if fpr < best_fpr and recall > 0.8:
-                best_fpr = fpr
-                best_weights_fpr = weights
-                best_threshold_fpr = threshold_val
-                metrics_best_fpr = {
-                    'TP': tp, 'FP': fp, 'TN': tn, 'FN': fn,
-                    'Accuracy': accuracy_score(df['True Label'], df['final_pred']),
-                    'F1 Score': f1_score(df['True Label'], df['final_pred']),
-                    'Recall': recall_score(df['True Label'], df['final_pred']),
-                    'AUC-ROC': roc_auc_score(df['True Label'], df['final_pred']),
-                    'FNR': fn / (fn + tp), 'FPR': fpr
-                }
+        df['final_pred_score'] = sum(df[col] * weight for col, weight in zip(column_names, weights))
+        df['final_pred'] = df['final_pred_score'].apply(lambda x: 1 if x >= threshold_val else 0)
 
-        log_results(output_file, "\nOptimal Parameters for nofalse (lowest FPR):")
-        log_results(output_file, f"Best Weights: {best_weights_fpr}")
-        log_results(output_file, f"Best Threshold: {best_threshold_fpr}")
+        tn, fp, fn, tp = confusion_matrix(df['True Label'], df['final_pred']).ravel()
+        accuracy = accuracy_score(df['True Label'], df['final_pred'])
+        f1 = f1_score(df['True Label'], df['final_pred'])
+        recall = recall_score(df['True Label'], df['final_pred'])
+        auc_roc = roc_auc_score(df['True Label'], df['final_pred'])
+        fnr = fn / (fn + tp)
+        fpr = fp / (fp + tn)
+
+        metrics_best_fpr = {
+            'TP': tp, 'FP': fp, 'TN': tn, 'FN': fn,
+            'Accuracy': accuracy,
+            'F1 Score': f1,
+            'Recall': recall,
+            'AUC-ROC': auc_roc,
+            'FNR': fnr,
+            'FPR': fpr
+        }
+
+        log_results(output_file, "\nOptimal Parameters for nofalse (fixed weights and threshold):")
+        log_results(output_file, f"Fixed Weights: {' '.join(map(str, weights))}")
+        log_results(output_file, f"Fixed Threshold: {threshold_val}")
         log_results(output_file, metrics_best_fpr)
 
     elif threshold_option == 'nomiss':
@@ -274,7 +270,7 @@ def main(platform, threshold_option=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python script.py <platform> [<threshold_option>]")
+        print("Usage: python AdaLink.py <platform> [<threshold_option>]")
     else:
         platform = sys.argv[1]
         threshold_option = sys.argv[2] if len(sys.argv) > 2 else None

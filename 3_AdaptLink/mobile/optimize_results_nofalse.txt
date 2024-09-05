@@ -1,16 +1,16 @@
 
-Optimal Parameters for nofalse (lowest FPR):
-Best Weights: [0.01744014 0.21598645 0.55553494 0.06582931 0.04310256 0.1021066 ]
-Best Threshold: 0.7935191652754631
+Optimal Parameters for nofalse (fixed weights and threshold):
+Fixed Weights: 1.0 1.0 1.0 1.0 1.0 1.0
+Fixed Threshold: 5.5
 {
-    "TP": 373,
-    "FP": 78,
-    "TN": 6113,
-    "FN": 93,
-    "Accuracy": 0.9743127534925642,
-    "F1 Score": 0.8135223555070883,
-    "Recall": 0.8004291845493562,
-    "AUC-ROC": 0.8939151253064984,
-    "FNR": 0.19957081545064378,
-    "FPR": 0.012598933936359231
+    "TP": 309,
+    "FP": 60,
+    "TN": 6131,
+    "FN": 157,
+    "Accuracy": 0.9674027339642481,
+    "F1 Score": 0.7401197604790419,
+    "Recall": 0.6630901287553648,
+    "AUC-ROC": 0.8266993205560058,
+    "FNR": 0.3369098712446352,
+    "FPR": 0.009691487643353255
 }
