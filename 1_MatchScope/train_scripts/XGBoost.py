@@ -98,7 +98,7 @@ recall = recall_score(y_test, predictions)
 print(f"Recall: {recall:.5f}")
 
 # Write results to file
-train_result_path = os.path.join(script_dir, f'{pt}/train/XGBoost_{n}.txt', 'w')
+train_result_path = os.path.join(script_dir, f'{pt}/train/XGBoost_{n}.txt')
 create_directory_if_not_exists(os.path.dirname(train_result_path))
 with open(train_result_path, 'w') as f:
     f.write(f"Best Model Parameters: {loaded_model.get_params()}\n")
