@@ -49,7 +49,7 @@ $ ./train.sh 13 mobile 2
 
 The first option should be the same as the number of sub-training sets, e.g. for `mobile` it is `13` and for `pc` it is `4`, just check the corresponding dataset.
 The second option is the platform type of the training data.
-And the third option is the maximum number of threads to run a **single** python script. We recommend setting smaller values during training, as there may be many python scripts running in parallel.
+And the third option is the maximum number of threads to run a **single** python script. For example here, the mobile platform contains **13** sub-training datasets, so it will run 13 python scripts in parallel, and allocate 2 threads each. We recommend setting smaller values during training, as there may be many python scripts running in parallel.
 
 For training individual models, refer to the scripts in the `training_scripts` folder. The training models will be saved in a newly created `PlatformType/models` folder. Some other training result data will also be stored in the corresponding newly created folder.
 
