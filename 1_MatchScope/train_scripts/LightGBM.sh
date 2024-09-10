@@ -12,7 +12,7 @@ fi
 export OMP_NUM_THREADS=$tn
 
 for i in $(seq 1 $j)
-dols
+do
    echo "Running train_model.py for dataset $i, pt $pt"
    python LightGBM.py $i $pt $tn&
 done
