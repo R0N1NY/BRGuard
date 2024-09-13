@@ -1,0 +1,5 @@
+Best Model Parameters: {'C': 1, 'break_ties': False, 'cache_size': 200, 'class_weight': None, 'coef0': 0.0, 'decision_function_shape': 'ovr', 'degree': 2, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': 10000, 'probability': True, 'random_state': None, 'shrinking': True, 'tol': 0.1, 'verbose': False}
+Accuracy: 0.86154
+F1 score: 0.67593
+Precision: 0.65766
+Recall: 0.69524

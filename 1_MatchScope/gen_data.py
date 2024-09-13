@@ -31,7 +31,7 @@ combined_df.fillna(0, inplace=True)
 
 combined_df['group'] = combined_df.groupby('ID').ngroup()
 
-pc_data = combined_df[combined_df['PlatformType'] == 'steam']
+pc_data = combined_df[combined_df['PlatformType'].isin(['steam', 'win'])]
 mobile_data = combined_df[combined_df['PlatformType'].isin(['android', 'ios'])]
 
 output_dir = 'dataset'

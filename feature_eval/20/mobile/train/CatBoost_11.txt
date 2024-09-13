@@ -1,0 +1,5 @@
+Best Model Parameters: {'thread_count': 2, 'verbose': False, 'task_type': 'CPU', 'border_count': 128, 'depth': 6, 'iterations': 500, 'l2_leaf_reg': 1, 'learning_rate': 0.01, 'loss_function': 'Logloss'}
+Accuracy: 0.94232
+F1 score: 0.62130
+Precision: 0.57482
+Recall: 0.67597
