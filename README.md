@@ -1,1 +1,1 @@
-# Farlight-84
+# Anti-cheat framework for Farlight-84
