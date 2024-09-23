@@ -1,5 +1,0 @@
-Best Model Parameters: {'C': 1, 'class_weight': None, 'dual': False, 'fit_intercept': False, 'intercept_scaling': 1, 'l1_ratio': None, 'max_iter': 100, 'multi_class': 'auto', 'n_jobs': None, 'penalty': 'l1', 'random_state': None, 'solver': 'saga', 'tol': 0.0001, 'verbose': 0, 'warm_start': False}
-Accuracy: 0.88809
-F1 score: 0.49560
-Precision: 0.36202
-Recall: 0.78541
